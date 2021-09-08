@@ -23,7 +23,7 @@ public class MainController {
         return itemService.getItemswithQuantityOverTwenty();
     }
 
-    @RequestMapping("/quantityOver")
+    @RequestMapping("/quantity_over")
     public List<Item> quantityOverAnyValue(@RequestParam(name = "quantity") Optional<Integer> quantityParam) {
         int quantity = 100;
         if (quantityParam.isPresent()) {
@@ -31,5 +31,12 @@ public class MainController {
         }
 
         return itemService.getItemWithQuantityOver(quantity);
+    }
+
+    @RequestMapping("/findByName")
+    public List<Item> findByName() {
+        String regexName= "soc__";
+        List<Item> result = itemService.getItemsWithNameLike(regexName);
+        return result;
     }
 }

@@ -15,6 +15,9 @@ public List<Item> getItemswithQuantityOverTwenty();
 @Query("select  i from Item i where i.quantity>:minQuantity")
 public List<Item> getItemWithQuantityOver(@Param("minQuantity") int minQuantity);
 
+@Query("select i from Item i where i.name like :regex")
+public List<Item> getItemsWithNameLike(@Param("regex") String regex);
+
 }
 
 
