@@ -10,6 +10,15 @@ public class Item {
     private Long idItem;
     private String name;
     private String price;
+    private Integer quantity;
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
 
     public Long getIdItem() {
         return idItem;
