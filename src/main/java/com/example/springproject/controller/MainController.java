@@ -16,9 +16,15 @@ public class MainController {
     ItemService itemService;
 
 
-    @RequestMapping("/hello")
+    @RequestMapping("/quantity")
     public List<Item> index(HttpServletResponse response){
 
         return itemService.getItemswithQuantityOverTwenty();
+    }
+
+    @RequestMapping("/quantityOver")
+    public List<Item> index(){
+
+        return itemService.getItemWithQuantityOver(50);
     }
 }

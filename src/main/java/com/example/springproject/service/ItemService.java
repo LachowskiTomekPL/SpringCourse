@@ -8,4 +8,5 @@ public interface ItemService {
 
     public void saveItem(Item item);
     public List<Item> getItemswithQuantityOverTwenty();
+    public List<Item> getItemWithQuantityOver(int minQuantity);
 }
